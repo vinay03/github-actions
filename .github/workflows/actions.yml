@@ -6,6 +6,18 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Show Current working directory and List files
+        run: |
+          pwd
+          ls -la
+        shell: bash
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Show Current working directory and List files after checkout
+        run: |
+          pwd
+          ls -la
+        shell: bash
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
@@ -13,8 +25,4 @@ jobs:
           who-to-greet: Vinay
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time }}"
-      - name: Show Current working directory and List files
-        run: |
-          pwd
-          ls -la
-        shell: bash
+      
