@@ -13,3 +13,6 @@ jobs:
           who-to-greet: Vinay
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time }}"
+      - name: Current working Directory
+        run: pwd
+        shell: bash
