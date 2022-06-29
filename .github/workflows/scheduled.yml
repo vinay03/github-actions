@@ -4,7 +4,6 @@ on:
   schedule:
     - cron: "*/5 * * * *"
 
-
 jobs:
   run-scheduled-command:
     runs-on: ubuntu-latest
