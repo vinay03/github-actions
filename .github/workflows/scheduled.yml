@@ -1,0 +1,17 @@
+name: Scheduled Workflow
+
+on:
+  schedule:
+    - cron: "* * * * *"
+
+
+jobs:
+  run-schduled-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Shell Command
+        run: date +"%c"
+      - name: Current working directory
+        run: pwd
+      - name: List files and folders
+        run: ls -la
