@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  run-schduled-command:
+  run-scheduled-command:
     runs-on: ubuntu-latest
     steps:
       - name: Execute Shell Command
